@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto p-8">
+  <div class="max-w-6xl mx-auto p-8 justify-center items-center h-screen">
     <h1 class="text-center py-8 font-bold text-xl">Camisetas</h1>
     <ul role="list" class="grid grid-cols-2 gap-8 md:grid-cols-3">
       <li v-for="file in files" :key="file.source" class="relative">
