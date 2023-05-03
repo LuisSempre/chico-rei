@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import Tshirts from "./components/Tshirts.vue";
+</script>
 
 <template>
-  <div>
-    <p className="text-red-500">HI</p>
-  </div>
+  <Tshirts />
 </template>
+
+<style scoped></style>
