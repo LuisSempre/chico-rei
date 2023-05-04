@@ -1,18 +1,9 @@
 <template>
-  <footer>
-    &copy; <span>{{ currentYear }}</span>
+  <footer class="flex justify-center items-center max-w-6xl mx-auto p-4">
+    &copy;
     <small>
-      Create with 💚 by <a href="https://github.com/LuisSempre">Luis Lucas</a>
+      Create with 💚 by
+      <a href="https://github.com/LuisSempre">Luis Lucas</a>
     </small>
   </footer>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      currentYear: new Date().getFullYear(),
-    };
-  },
-};
-</script>

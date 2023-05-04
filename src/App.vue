@@ -1,5 +1,7 @@
 <script setup>
+
 import Footer from "./components/Footer.vue";
+import Form from "./components/Form.vue";
 import Menu from "./components/Menu.vue";
 import Tshirts from "./components/Tshirts.vue";
 </script>
@@ -7,7 +9,8 @@ import Tshirts from "./components/Tshirts.vue";
 <template>
   <Menu />
   <Tshirts />
-  <Footer/>
+  <Form />
+  <Footer />
 </template>
 
 <style scoped></style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="max-w-6xl mx-auto p-8 justify-center items-center h-screen">
+  <div class="max-w-6xl mx-auto p-8 justify-center items-center h-full">
     <h1 class="text-center py-8 font-bold text-xl">Camisetas</h1>
     <ul role="list" class="grid grid-cols-2 gap-8 md:grid-cols-3">
       <li v-for="file in files" :key="file.source" class="relative">
-        <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col lg:flex-row gap-4">
           <div>
             <img :src="file.source" alt="" class="w-62" />
           </div>
