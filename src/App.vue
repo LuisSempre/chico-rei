@@ -1,5 +1,4 @@
 <script setup>
-
 import Footer from "./components/Footer.vue";
 import Form from "./components/Form.vue";
 import Menu from "./components/Menu.vue";
