@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row h-full max-w-6xl mx-auto justify-center gap-8 py-8 text-sm"
+    class="flex flex-row h-full max-w-2xl mx-auto justify-center gap-8 py-8 text-sm w-full"
   >
     <div>
       <form>
@@ -41,7 +41,7 @@
       </form>
       <button class="bg-gray-900 text-white p-2">Fechar pedido</button>
     </div>
-    <div class="text-xl">
+    <div class="text-xl bg-gray-200 p-4 h-full w-full">
       <p>Sua sacola</p>
     </div>
   </div>
