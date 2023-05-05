@@ -41,11 +41,10 @@
       </form>
       <button class="bg-gray-900 text-white p-2">Fechar pedido</button>
     </div>
-    <div class="text-xl bg-gray-200 p-4 h-full w-full">
-      <p>Sua sacola</p>
-    </div>
+ <Shopping />
   </div>
 </template>
 <script setup>
 import Cep from "./Cep.vue";
+import Shopping from "./Shopping.vue";
 </script>

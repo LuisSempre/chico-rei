@@ -4,13 +4,16 @@
       <p>Informacoes de entrega</p>
       <div class="flex flex-col">
         <label for="cep">CEP</label>
-        <input
-          class="border-2 border-black"
-          type="text"
-          id="cep"
-          name="cep"
-          v-model="cep"
-        />
+        <div class="flex">
+          <input
+            class="border-2 border-black"
+            type="text"
+            id="cep"
+            name="cep"
+            v-model="cep"
+          />
+          <button type="button" @click="searchCep" class="px-2">Buscar</button>
+        </div>
       </div>
       <div class="flex gap-4">
         <div class="flex flex-col">

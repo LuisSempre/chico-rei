@@ -19,7 +19,6 @@
           <span class="sr-only">Close menu</span>
           <XMarkIcon class="h-6 w-6" aria-hidden="true" />
         </button>
-
       </div>
     </DialogPanel>
   </Dialog>
