@@ -24,7 +24,7 @@
   </Dialog>
   <header class="bg-white shadow w-full mx-auto">
     <nav
-      class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8  "
+      class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8"
       aria-label="Global"
     >
       <div class="flex">
@@ -43,10 +43,7 @@
 
 <script setup>
 import { ref } from "vue";
-import {
-  Dialog,
-  DialogPanel,
-} from "@headlessui/vue";
+import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const mobileMenuOpen = ref(false);
