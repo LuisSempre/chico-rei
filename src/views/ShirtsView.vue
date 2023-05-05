@@ -1,11 +1,12 @@
 <template>
-  <div class="p-8 flex justify-center items-center max-w-6xl mx-auto gap-4">
+  <div class="flex justify-center items-center">
     <select v-model="selectedRoute" v-on:change="navigate">
       <option value="/sweatshirts">Sweatshirts</option>
       <option value="/tshirts">Tshirts</option>
       <option value="/shirts">Shirts</option>
     </select>
     <RouterView />
+    <h1 class="text-red-500">Shirts</h1>
   </div>
 </template>
 
@@ -13,7 +14,7 @@
 export default {
   data() {
     return {
-      selectedRoute: '/about'
+      selectedRoute: '/shirts'
     }
   },
   methods: {
