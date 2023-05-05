@@ -1,7 +1,7 @@
 <script setup>
-import Tshirts from '../components/Tshirts.vue'
+import Tshirt from '../components/Tshirt.vue'
 </script>
 
 <template>
-  <Tshirts />
+  <Tshirt />
 </template>
