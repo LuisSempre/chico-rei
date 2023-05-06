@@ -5,7 +5,7 @@ import Menu from './components/Menu.vue'
 </script>
 
 <template>
-  <div class="">
+  <div>
     <Menu />
     <div class="p-8 flex justify-center items-center max-w-6xl mx-auto gap-4">
       <RouterLink to="/">Home</RouterLink>

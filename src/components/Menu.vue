@@ -7,7 +7,7 @@
   >
     <div class="fixed inset-0 z-10" />
     <DialogPanel
-      class="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+      class="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm"
     >
       <div class="flex items-center justify-between">
         <p>Menu</p>
