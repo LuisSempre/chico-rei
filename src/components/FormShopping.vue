@@ -11,27 +11,31 @@
         </div>
         <div class="flex flex-col">
           <label>Telefone</label>
-          <input v-model="formData.name" type="number" class="border-2 border-black" />
-          <div v-if="formErrors.name">{{ formErrors.name }}</div>
+          <input v-model="formData.phone" type="number" class="border-2 border-black" />
+          <div v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
         <div class="space-y-4 my-8">
           <p>Informacoes de pagamento</p>
           <div class="flex flex-col">
             <label for="">Numero do cartao</label>
-            <input type="number" class="border-2 border-black" />
+            <input v-model="formData.numberCard" type="number" class="border-2 border-black" />
+            <div v-if="formErrors.numberCard">{{ formErrors.numberCard }}</div>
           </div>
           <div class="flex flex-col">
             <label for="">Titular do cartao</label>
-            <input type="number" class="border-2 border-black" />
+            <input v-model="formData.titleCard" type="number" class="border-2 border-black" />
+            <div v-if="formErrors.titleCard">{{ formErrors.titleCard }}</div>
           </div>
           <div class="flex gap-4">
             <div class="flex flex-col">
               <label for="">Data de vencimento</label>
-              <input type="number" class="border-2 border-black" />
+              <input v-model="formData.dateCard" type="number" class="border-2 border-black" />
+            <div v-if="formErrors.dateCard">{{ formErrors.dateCard }}</div>
             </div>
             <div class="flex flex-col">
               <label for="">CVC</label>
-              <input type="number" class="border-2 border-black" />
+              <input v-model="formData.cvc" type="number" class="border-2 border-black" />
+            <div v-if="formErrors.cvc">{{ formErrors.cvc }}</div>
             </div>
           </div>
         </div>
@@ -54,15 +58,21 @@ export default {
   data() {
     return {
       formData: {
-        name: '',
-        email: ''
+        email: '',
+        phone: '',
+        numberCard: ''
+
       },
       formSchema: z.object({
-        name: z
+        email: z.string().nonempty('Email is required.').email('Invalid email format.'),
+        phone: z
           .string()
-          .nonempty('Name is required.')
-          .min(11, 'Name must be at least 11 characters.'),
-        email: z.string().nonempty('Email is required.').email('Invalid email format.')
+          .nonempty('Telefone is required.')
+          .min(11, 'Telefone must be at least 11 characters.'),
+        numberCard:  z.string()
+          .nonempty('Telefone is required.')
+          .min(11, 'Telefone must be at least 11 characters.'),
+        
       }),
       formErrors: {}
     }
