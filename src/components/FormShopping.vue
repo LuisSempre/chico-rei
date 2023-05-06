@@ -1,59 +1,68 @@
 <template>
-  <form @submit.prevent="handleSubmit">
+  <form @submit.prevent="submitForm">
     <div>
-      <label for="name">Name:</label>
-      <input id="name" type="text" v-model="formData.name" />
-      <p v-if="rules.name.$error" class="error">{{ rules.name.$message }}</p>
+      <label>Name:</label>
+      <input v-model="formData.name" type="text" />
+      <div v-if="formErrors.name">{{ formErrors.name }}</div>
     </div>
-
     <div>
-      <label for="email">Email:</label>
-      <input id="email" type="text" v-model="formData.email" />
-      <p v-if="rules.email.$error" class="error">{{ rules.email.$message }}</p>
+      <label>Email:</label>
+      <input v-model="formData.email" type="email" />
+      <div v-if="formErrors.email">{{ formErrors.email }}</div>
     </div>
-
     <div>
-      <label for="age">Age:</label>
-      <input id="age" type="number" v-model.number="formData.age" />
-      <p v-if="rules.age.$error" class="error">{{ rules.age.$message }}</p>
+      <label>Password:</label>
+      <input v-model="formData.password" type="password" />
+      <div v-if="formErrors.password">{{ formErrors.password }}</div>
     </div>
-
     <button type="submit">Submit</button>
+    <div v-if="message">{{ message }}</div>
   </form>
 </template>
 
 <script>
-import { ref } from 'vue'
-import { useVuelidate } from '@vuelidate/core'
-import { required, email } from '@vuelidate/validators'
 import { z } from 'zod'
 
-const validationSchema = z.object({
-  name: z.string().nonempty('Name is required'),
-  email: z.string().email('Invalid email address'),
-  age: z.number().min(18, 'You must be at least 18 years old')
-})
 export default {
-  setup() {
-    const formData = ref({
-      name: '',
-      email: '',
-      age: null
-    })
-
-    const rules = useVuelidate(validationSchema, formData)
-
-    const handleSubmit = () => {
-      if (!rules.value.$invalid) {
-        // Handle form submission
-        console.log(formData.value)
-      }
-    }
-
+  name: 'YourFormComponent',
+  data() {
     return {
-      formData,
-      rules,
-      handleSubmit
+      formData: {
+        name: '',
+        email: '',
+        password: ''
+      },
+      formSchema: z.object({
+        name: z
+          .string()
+          .nonempty('Name is required.')
+          .min(3, 'Name must be at least 3 characters.'),
+        email: z.string().nonempty('Email is required.').email('Invalid email format.'),
+        password: z
+          .string()
+          .nonempty('Password is required.')
+          .min(6, 'Password must be at least 6 characters.')
+      }),
+      formErrors: {}
+    }
+  },
+  methods: {
+    validateForm() {
+      try {
+        this.formSchema.parse(this.formData)
+        this.formErrors = {}
+        return true
+      } catch (error) {
+        if (error.formErrors) {
+          this.formErrors = error.formErrors.fieldErrors
+        }
+        return false
+      }
+    },
+    submitForm() {
+      if (this.validateForm()) {
+        this.message = 'Success message';
+      }
     }
   }
 }

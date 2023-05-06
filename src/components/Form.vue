@@ -38,6 +38,7 @@
           </div>
         </div>
         <button class="bg-gray-900 text-white p-2" type="submit">Fechar pedido</button>
+        <span>{{ errors.send }}</span>
       </form>
       <div class="flex justify-end"></div>
     </div>

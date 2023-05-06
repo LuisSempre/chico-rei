@@ -1,7 +1,10 @@
 <script setup>
-import Form from '../components/Form.vue'
+import Form from '../components/Form.vue';
+import FormShopping from '../components/FormShopping.vue';
 </script>
 
 <template>
-  <Form />
+  <FormShopping />
 </template>
+
+
