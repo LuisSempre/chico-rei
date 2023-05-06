@@ -1,22 +1,19 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <div>
-      <label>Name:</label>
-      <input v-model="formData.name" type="text" />
+  <form @submit.prevent="submitForm" class="flex mx-auto max-w-6xl flex-col space-y-8">
+    <div class="flex flex-col">
+      <label>Telefone</label>
+      <input v-model="formData.name" type="text" class="border-2 border-black"/>
       <div v-if="formErrors.name">{{ formErrors.name }}</div>
     </div>
-    <div>
-      <label>Email:</label>
-      <input v-model="formData.email" type="email" />
+    <div class="flex flex-col">
+      <label>Email</label>
+      <input v-model="formData.email" type="email" class="border-2 border-black"/>
       <div v-if="formErrors.email">{{ formErrors.email }}</div>
     </div>
-    <div>
-      <label>Password:</label>
-      <input v-model="formData.password" type="password" />
-      <div v-if="formErrors.password">{{ formErrors.password }}</div>
+    <div class="flex justify-end">
+      <button type="submit" class="bg-gray-900 text-white p-2">Fechar pedido</button>
+      <div v-if="message">{{ message }}</div>
     </div>
-    <button type="submit">Submit</button>
-    <div v-if="message">{{ message }}</div>
   </form>
 </template>
 
@@ -24,13 +21,12 @@
 import { z } from 'zod'
 
 export default {
-  name: 'YourFormComponent',
+  name: 'FormShopping',
   data() {
     return {
       formData: {
         name: '',
         email: '',
-        password: ''
       },
       formSchema: z.object({
         name: z
@@ -38,10 +34,6 @@ export default {
           .nonempty('Name is required.')
           .min(3, 'Name must be at least 3 characters.'),
         email: z.string().nonempty('Email is required.').email('Invalid email format.'),
-        password: z
-          .string()
-          .nonempty('Password is required.')
-          .min(6, 'Password must be at least 6 characters.')
       }),
       formErrors: {}
     }
@@ -61,7 +53,7 @@ export default {
     },
     submitForm() {
       if (this.validateForm()) {
-        this.message = 'Success message';
+        this.message = 'Success message'
       }
     }
   }
