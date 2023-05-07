@@ -1,5 +1,5 @@
 <template>
-  <div class="grid max-w-2xl mx-auto grid-cols-2 gap-8">
+  <div class="grid max-w-2xl mx-auto grid-cols-2 gap-8 h-screen">
     <div class="max-2-xl mx-auto">
       <form @submit.prevent="submitForm" class="flex mx-auto max-w-6xl flex-col space-y-8">
         <h1 class="text-xl">Finalizacao do pedido</h1>
@@ -14,6 +14,7 @@
           <input v-model="formData.phone" type="number" class="border-2 border-black" />
           <div v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
+        <Cep />
         <div class="space-y-4 my-8">
           <p>Informacoes de pagamento</p>
           <div class="flex flex-col">
@@ -30,18 +31,19 @@
             <div class="flex flex-col">
               <label for="">Data de vencimento</label>
               <input v-model="formData.dateCard" type="number" class="border-2 border-black" />
-            <div v-if="formErrors.dateCard">{{ formErrors.dateCard }}</div>
+              <div v-if="formErrors.dateCard">{{ formErrors.dateCard }}</div>
             </div>
             <div class="flex flex-col">
               <label for="">CVC</label>
               <input v-model="formData.cvc" type="number" class="border-2 border-black" />
-            <div v-if="formErrors.cvc">{{ formErrors.cvc }}</div>
+              <div v-if="formErrors.cvc">{{ formErrors.cvc }}</div>
             </div>
           </div>
         </div>
-
         <div class="flex justify-end">
-          <button type="submit" class="bg-gray-900 text-white p-2">Fechar pedido</button>
+          <button type="submit" class="bg-gray-900 text-white p-2">
+            Fechar&nbsp;pedido
+          </button>
           <p v-if="message">{{ message }}</p>
         </div>
       </form>
@@ -52,49 +54,66 @@
 
 <script>
 import { z } from 'zod'
+import Cep from './Cep.vue'
 
 export default {
-  name: 'FormShopping',
-  data() {
-    return {
-      formData: {
-        email: '',
-        phone: '',
-        numberCard: ''
-
-      },
-      formSchema: z.object({
-        email: z.string().nonempty('Email is required.').email('Invalid email format.'),
-        phone: z
-          .string()
-          .nonempty('Telefone is required.')
-          .min(11, 'Telefone must be at least 11 characters.'),
-        numberCard:  z.string()
-          .nonempty('Telefone is required.')
-          .min(11, 'Telefone must be at least 11 characters.'),
-        
-      }),
-      formErrors: {}
-    }
-  },
-  methods: {
-    validateForm() {
-      try {
-        this.formSchema.parse(this.formData)
-        this.formErrors = {}
-        return true
-      } catch (error) {
-        if (error.formErrors) {
-          this.formErrors = error.formErrors.fieldErrors
-        }
-        return false
-      }
+    name: "FormShopping",
+    data() {
+        return {
+            formData: {
+                email: "",
+                phone: "",
+                numberCard: "",
+                titleCard: "",
+                dateCard: "",
+                cvc: ""
+            },
+            formSchema: z.object({
+                email: z.string().nonempty("Email is required.").email("Invalid email format."),
+                phone: z
+                    .string()
+                    .nonempty("Telefone is required.")
+                    .min(11, "Telefone must be at least 11 characters."),
+                numberCard: z
+                    .string()
+                    .nonempty("Number is required.")
+                    .min(11, "Number must be at least 11 characters."),
+                titleCard: z
+                    .string()
+                    .nonempty("Titulo is required.")
+                    .min(11, "Titulo must be at least 11 characters."),
+                dateCard: z
+                    .string()
+                    .nonempty("Data is required.")
+                    .min(11, "Data must be at least 11 characters."),
+                cvc: z
+                    .string()
+                    .nonempty("CVC is required.")
+                    .min(3, "CVC must be at least 11 characters.")
+            }),
+            formErrors: {}
+        };
     },
-    submitForm() {
-      if (this.validateForm()) {
-        this.message = 'Success message'
-      }
-    }
-  }
+    methods: {
+        validateForm() {
+            try {
+                this.formSchema.parse(this.formData);
+                this.formErrors = {};
+                return true;
+            }
+            catch (error) {
+                if (error.formErrors) {
+                    this.formErrors = error.formErrors.fieldErrors;
+                }
+                return false;
+            }
+        },
+        submitForm() {
+            if (this.validateForm()) {
+                this.message = "Success message";
+            }
+        }
+    },
+    components: { Cep }
 }
 </script>

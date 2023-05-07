@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row h-full max-w-2xl mx-auto gap-8 py-8 text-sm w-full">
+  <div class="flex flex-col md:flex-row h-full max-w-2xl mx-auto gap-8 py-8 text-sm w-full h-screen">
     <div>
       <form class="flex justify-center flex-col" @submit.prevent="submitForm">
         <h1 class="text-xl">Finalizacao do pedido</h1>
