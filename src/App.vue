@@ -7,7 +7,7 @@ import Menu from './components/Menu.vue'
 <template>
   <div>
     <Menu />
-    <div class="p-8 flex justify-center items-center max-w-6xl mx-auto gap-4">
+    <div class="py-8 flex justify-center items-center max-w-6xl mx-auto gap-4">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">Selections</RouterLink>
       <RouterLink to="/shopping">Shopping</RouterLink>

@@ -1,7 +1,7 @@
 <template>
-  <div class="grid max-w-2xl mx-auto grid-cols-2 gap-8 h-screen">
-    <div class="max-2-xl mx-auto">
-      <form @submit.prevent="submitForm" class="flex mx-auto max-w-6xl flex-col space-y-8">
+  <div class="flex flex-col-reverse md:flex-row h-full max-w-2xl mx-auto gap-8 py-8 text-sm w-full">
+    <div>
+      <form @submit.prevent="submitForm" class="flex flex-col space-y-8">
         <h1 class="text-xl">Finalizacao do pedido</h1>
         <p>Informacoes de contato</p>
         <div class="flex flex-col">
@@ -24,7 +24,7 @@
           </div>
           <div class="flex flex-col">
             <label for="">Titular do cartao</label>
-            <input v-model="formData.titleCard" type="number" class="border-2 border-black" />
+            <input v-model="formData.titleCard" type="text" class="border-2 border-black" />
             <div v-if="formErrors.titleCard">{{ formErrors.titleCard }}</div>
           </div>
           <div class="flex gap-4">
@@ -41,79 +41,69 @@
           </div>
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="bg-gray-900 text-white p-2">
-            Fechar&nbsp;pedido
-          </button>
-          <p v-if="message">{{ message }}</p>
+          <button type="submit" class="bg-gray-900 text-white p-2">Fechar&nbsp;pedido</button>
         </div>
+        <p v-if="message">{{ message }}</p>
       </form>
     </div>
-    <div></div>
+    <div>
+      <Shopping />
+    </div>
   </div>
 </template>
 
 <script>
 import { z } from 'zod'
 import Cep from './Cep.vue'
+import Shopping from './Shopping.vue'
 
 export default {
-    name: "FormShopping",
-    data() {
-        return {
-            formData: {
-                email: "",
-                phone: "",
-                numberCard: "",
-                titleCard: "",
-                dateCard: "",
-                cvc: ""
-            },
-            formSchema: z.object({
-                email: z.string().nonempty("Email is required.").email("Invalid email format."),
-                phone: z
-                    .string()
-                    .nonempty("Telefone is required.")
-                    .min(11, "Telefone must be at least 11 characters."),
-                numberCard: z
-                    .string()
-                    .nonempty("Number is required.")
-                    .min(11, "Number must be at least 11 characters."),
-                titleCard: z
-                    .string()
-                    .nonempty("Titulo is required.")
-                    .min(11, "Titulo must be at least 11 characters."),
-                dateCard: z
-                    .string()
-                    .nonempty("Data is required.")
-                    .min(11, "Data must be at least 11 characters."),
-                cvc: z
-                    .string()
-                    .nonempty("CVC is required.")
-                    .min(3, "CVC must be at least 11 characters.")
-            }),
-            formErrors: {}
-        };
-    },
-    methods: {
-        validateForm() {
-            try {
-                this.formSchema.parse(this.formData);
-                this.formErrors = {};
-                return true;
-            }
-            catch (error) {
-                if (error.formErrors) {
-                    this.formErrors = error.formErrors.fieldErrors;
-                }
-                return false;
-            }
-        },
-        submitForm() {
-            if (this.validateForm()) {
-                this.message = "Success message";
-            }
+  name: 'FormShopping',
+  data() {
+    return {
+      formData: {
+        email: '',
+        phone: '',
+        numberCard: '',
+        titleCard: '',
+        dateCard: '',
+        cvc: ''
+      },
+      formSchema: z.object({
+        email: z.string().nonempty('Email is required.').email('Invalid email format.'),
+        phone: z.number().lte(1, { message: 'this👏is👏too👏big' }),
+        numberCard: z.number().lte(1, { message: 'this👏is👏too👏big' }),
+        titleCard: z
+          .string()
+          .nonempty('Titulo is required.')
+          .min(1, 'Titulo must be at least 11 characters.'),
+        dateCard: z.number().lte(1, { message: 'this👏is👏too👏big' }),
+        cvc: z.number().lte(1, { message: 'this👏is👏too👏big' })
+      }),
+      formErrors: {}
+    }
+  },
+  methods: {
+    validateForm() {
+      try {
+        this.formSchema.parse(this.formData)
+        this.formErrors = {}
+        return true
+      } catch (error) {
+        if (error.formErrors) {
+          this.formErrors = error.formErrors.fieldErrors
         }
+        return false
+      }
     },
-    components: { Cep }
+    submitForm() {
+      if (this.validateForm()) {
+        this.message = 'Enviado com successo'
+        const jsonData = JSON.stringify(this.formData)
+        console.log(jsonData) // exibir o JSON no console
+      }
+    }
+  },
+  components: { Cep, Shopping }
 }
 </script>

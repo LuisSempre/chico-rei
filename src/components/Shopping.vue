@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-200 p-4 h-full w-full">
+  <div class="bg-gray-200 p-4 max-w-xs mx-auto">
     <p class="text-2xl">Sua sacola</p>
     <div class="flex flex-col-2 gap-2">
       <div>
