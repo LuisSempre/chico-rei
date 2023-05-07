@@ -6,17 +6,6 @@
           <div>
             <img :src="file.source" alt="" class="w-62" />
           </div>
-          <div class="text-[10px] space-y-4">
-            <p class="font-semibold">
-              {{ file.title }}
-            </p>
-            <p>
-              {{ file.description }}
-            </p>
-            <p class="font-semibold">
-              {{ file.price }}
-            </p>
-          </div>
         </div>
       </li>
     </ul>

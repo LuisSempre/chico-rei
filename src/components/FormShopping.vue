@@ -14,7 +14,9 @@
           <input v-model="formData.phone" type="number" class="border-2 border-black" />
           <div v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
-        <Cep />
+        <div>
+          <Cep />
+        </div>
         <div class="space-y-4 my-8">
           <p>Informacoes de pagamento</p>
           <div class="flex flex-col">
@@ -70,15 +72,31 @@ export default {
         cvc: ''
       },
       formSchema: z.object({
-        email: z.string().nonempty('Email is required.').email('Invalid email format.'),
-        phone: z.number().lte(1, { message: 'this👏is👏too👏big' }),
-        numberCard: z.number().lte(1, { message: 'this👏is👏too👏big' }),
-        titleCard: z
-          .string()
-          .nonempty('Titulo is required.')
-          .min(1, 'Titulo must be at least 11 characters.'),
-        dateCard: z.number().lte(1, { message: 'this👏is👏too👏big' }),
-        cvc: z.number().lte(1, { message: 'this👏is👏too👏big' })
+        email: z.string().nonempty('Obrigatório.').email('Emai invalido'),
+        phone: z
+          .number({
+            required_error: 'Obrigatório.',
+            invalid_type_error: 'Obrigatório.'
+          })
+          .gte(11),
+        numberCard: z
+          .number({
+            required_error: 'Obrigatório.',
+            invalid_type_error: 'Obrigatório.'
+          })
+          .gte(11),
+        titleCard: z.string().nonempty('Obrigatório.').min(10, 'Minimo de 10 letras'),
+        dateCard: z
+          .number({
+            required_error: 'Obrigatório.',
+            invalid_type_error: 'Obrigatório.'
+          }),
+        cvc: z
+          .number({
+            required_error: 'Obrigatório.',
+            invalid_type_error: 'Obrigatório.'
+          })
+          .gte(3)
       }),
       formErrors: {}
     }
@@ -100,7 +118,7 @@ export default {
       if (this.validateForm()) {
         this.message = 'Enviado com successo'
         const jsonData = JSON.stringify(this.formData)
-        console.log(jsonData) // exibir o JSON no console
+        console.log(jsonData)
       }
     }
   },
