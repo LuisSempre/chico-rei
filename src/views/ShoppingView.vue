@@ -1,5 +1,5 @@
 <script setup>
-import FormShopping from '../components/FormShopping.vue';
+import FormShopping from '@/components/FormShopping.vue';
 </script>
 
 <template>

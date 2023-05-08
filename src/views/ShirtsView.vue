@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-col justify-start items-start max-w-6xl mx-auto gap-4 px-8">
+    <div class="flex flex-col justify-start items-start max-w-7xl mx-auto gap-4 px-8">
       <select v-model="selectedRoute" v-on:change="navigate" class="bg-white border border-black rounded-md">
         <option value="/sweatshirts" class="">Moletons</option>
         <option value="/tshirts">Camisetas</option>
@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import Shirts from '../components/Shirts.vue'
+import Shirts from '@/components/Shirts.vue'
 
 export default {
   data() {

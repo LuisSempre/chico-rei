@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-start items-start max-w-6xl mx-auto gap-4 h-screen">
+  <div class="flex flex-col justify-start items-start max-w-7xl mx-auto gap-4 h-screen">
     <select v-model="selectedRoute" v-on:change="navigate" class="bg-white border border-black mx-8 rounded-md">
       <option value="/sweatshirts" class="">Moletons</option>
       <option value="/tshirts">Camisetas</option>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SweatShirts from '../components/SweatShirts.vue';
+import SweatShirts from '@/components/SweatShirts.vue';
 
 export default {
     data() {

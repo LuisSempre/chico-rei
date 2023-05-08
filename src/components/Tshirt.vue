@@ -7,7 +7,7 @@
           <div>
             <img :src="file.source" alt="" class="w-62 rounded-md"/>
           </div>
-          <div class="text-[10px] md:text-[12px] max-w-[180px] mx-auto content-between grid">
+          <div class="text-xs md:text-md lg:max-w-1/8 max-w-1/4 mx-auto lg:content-between space-y-4 grid">
             <p class="font-semibold">
               {{ file.title }}
             </p>
