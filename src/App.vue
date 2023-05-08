@@ -9,8 +9,8 @@ import Menu from './components/Menu.vue'
     <Menu />
     <div class="py-8 flex justify-center items-center max-w-6xl mx-auto gap-4">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">Selections</RouterLink>
-      <RouterLink to="/shopping">Shopping</RouterLink>
+      <RouterLink to="/about">Router</RouterLink>
+      <RouterLink to="/shopping">Checkout</RouterLink>
     </div>
     <RouterView />
     <Footer />
