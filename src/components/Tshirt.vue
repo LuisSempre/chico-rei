@@ -1,13 +1,13 @@
 <template>
-  <div class="max-w-6xl mx-auto p-8 justify-center items-center h-full">
+  <div class="max-w-7xl mx-auto p-8 justify-center items-center h-full">
     <h1 class="text-center py-8 font-bold text-xl">Camisetas</h1>
-    <ul role="list" class="grid grid-cols-2 gap-8 md:grid-cols-3">
+    <ul role="list" class="grid grid-cols-2 gap-8 lg:grid-cols-3">
       <li v-for="file in files" :key="file.source" class="relative">
         <div class="flex flex-col lg:flex-row gap-4">
           <div>
-            <img :src="file.source" alt=""/>
+            <img :src="file.source" alt="" class="w-62 rounded-md"/>
           </div>
-          <div class="text-[10px] space-y-[15px]">
+          <div class="text-[10px] md:text-[12px] max-w-[180px] mx-auto content-between grid">
             <p class="font-semibold">
               {{ file.title }}
             </p>

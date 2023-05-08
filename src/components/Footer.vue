@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex justify-center items-center max-w-6xl mx-auto p-4">
+  <footer class="flex justify-center items-center max-w-7xl mx-auto p-4">
     <small>
       Copyright &copy;
       {{ currentYear }}
