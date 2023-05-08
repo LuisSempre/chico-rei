@@ -26,40 +26,31 @@
 <script setup>
 const files = [
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/1.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/2.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/3.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/4.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/5.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/6.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/7.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'SweatShirts/8.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/21870/37b6c0d2-e74b-11ec-88f9-0f10c80a2a8b.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
-  },
-];
+    source: 'SweatShirts/9.avif'
+  }
+]
 </script>

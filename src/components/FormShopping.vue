@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col-reverse md:flex-row h-full max-w-2xl mx-auto gap-8 py-8 text-sm w-full">
-    <div>
+    <div class=" max-w-2xl mx-auto">
       <form @submit.prevent="submitForm" class="flex flex-col space-y-8">
         <h1 class="text-xl">Finalizacao do pedido</h1>
         <p>Informacoes de contato</p>
@@ -45,7 +45,7 @@
         <div class="flex justify-end">
           <button type="submit" class="bg-gray-900 text-white p-2">Fechar&nbsp;pedido</button>
         </div>
-        <p v-if="message">{{ message }}</p>
+        <p v-if="message" class="bg-green-500 text-white text-center p-2">{{ message }}</p>
       </form>
     </div>
     <div>

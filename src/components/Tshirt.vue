@@ -7,7 +7,7 @@
           <div>
             <img :src="file.source" alt="" class="w-62" />
           </div>
-          <div class="text-[10px] space-y-4">
+          <div class="text-[10px] space-y-4 max-w-2xl mx-auto">
             <p class="font-semibold">
               {{ file.title }}
             </p>
@@ -27,76 +27,72 @@
 <script setup>
 const files = [
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta Cervejinha',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+
+    source: 'Tshirts/1.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta bolso gaivota',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+    source: 'Tshirts/2.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta Black Heart',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Camiseta com 100% de fibra natural de algodão sustentável. A Coleção Minimalista da Chico Rei vem do exercício de expressão através do que é elementar. São estampas que fogem do nosso padrão, desafiando a forma da camiseta.',
+
+    source: 'Tshirts/3.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta bolso gaivota',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+    source: 'Tshirts/4.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta La Belle De Jour',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+
+    source: 'Tshirts/5.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta Metade de mim e amor',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+
+    source: 'Tshirts/6.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta básica preto noir',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+
+    source: 'Tshirts/7.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta algodão pima básica branca',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+      'Malha 100% de algodão Pima peruano. Considerado um dos melhores algodões do mundo, o Pima peruano é produzido com as fibras mais finas e mais longas que existem, destacando-se pela suavidade e resistência. Mais qualidade e conforto.',
+    source: 'Tshirts/8.avif'
   },
   {
-    title: "Produto Lorem",
-    price: "R$ 19,90",
+    title: 'Camiseta Je Re Regrette Rien',
+    price: 'R$ 19,90',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
-  },
-];
+      'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
+    source: 'Tshirts/9.avif'
+  }
+]
 </script>

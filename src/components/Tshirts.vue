@@ -15,40 +15,31 @@
 <script setup>
 const files = [
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/1.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/2.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/3.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/4.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/5.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/6.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/7.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
+    source: 'Tshirts/8.avif'
   },
   {
-    source:
-      "https://chicorei.imgix.net/4178/b2026922-1748-11ed-b5c6-2b4175e2bfd0.jpg?auto=compress,format&q=65&w=550&h=824&fit=crop&crop=top",
-  },
-];
+    source: 'Tshirts/9.avif'
+  }
+]
 </script>
