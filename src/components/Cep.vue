@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col mx-auto justify-center items-center">
+  <div class="flex flex-col justify-center items-center">
     <div class="space-y-4">
       <p>Informações  de entrega</p>
       <div class="flex flex-col">

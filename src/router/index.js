@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/shopping',
       name: 'shopping',
-      component: () => import('@/views/ShoppingView.vue')
+      component: () => import('@/views/CheckOutView.vue')
     },
     {
       path: '/tshirts',

@@ -4,7 +4,7 @@
     <div class="flex flex-col-2 gap-2">
       <div>
         <img
-          src="/public/Tshirts/1.avif"
+          src="/Tshirts/1.avif"
           alt=""
           class="rounded-md"
         />

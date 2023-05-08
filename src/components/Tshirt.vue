@@ -5,9 +5,9 @@
       <li v-for="file in files" :key="file.source" class="relative">
         <div class="flex flex-col lg:flex-row gap-4">
           <div>
-            <img :src="file.source" alt="" class="w-62 rounded-md"/>
+            <img :src="file.source" alt="" class="w-62 rounded-md" />
           </div>
-          <div class="text-xs lg:max-w-xs  max-w-sm -mx-auto lg:content-between space-y-4 grid">
+          <div class="text-xs lg:max-w-xs max-w-sm -mx-auto lg:content-between space-y-4 grid">
             <p class="font-semibold">
               {{ file.title }}
             </p>

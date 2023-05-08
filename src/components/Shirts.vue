@@ -2,11 +2,9 @@
   <div class="max-w-7xl mx-auto p-8 justify-center items-center h-full">
     <ul role="list" class="grid grid-cols-2 gap-8 md:grid-cols-3">
       <li v-for="file in files" :key="file.source" class="relative">
-       
-          <div>
-            <img :src="file.source" alt="" class="w-62 rounded-md" />
-          </div>
-      
+        <div>
+          <img :src="file.source" alt="" class="w-62 rounded-md" />
+        </div>
       </li>
     </ul>
   </div>

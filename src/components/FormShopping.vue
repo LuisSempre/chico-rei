@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col-reverse md:flex-row h-full max-w-2xl mx-auto gap-8 py-8 text-sm w-full">
-    <div class=" max-w-2xl mx-auto">
+    <div class="flex flex-col justify-center items-center">
       <form @submit.prevent="submitForm" class="flex flex-col space-y-8">
         <h1 class="text-xl font-semibold">Finalização do pedido</h1>
         <p class="font-semibold">Informações  de contato</p>
@@ -15,7 +15,8 @@
           <div class="text-alert" v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
         <div>
-          <Cep />
+          <Cep/>
+          <div class="text-alert" v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
         <div class="space-y-4 my-8">
           <p class="font-semibold">Informações de pagamento</p>
