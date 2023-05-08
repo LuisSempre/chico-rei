@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center">
     <div class="space-y-4">
-      <p>Informações  de entrega</p>
+      <p class="font-semibold">Informações  de entrega</p>
       <div class="flex flex-col">
         <label for="cep">CEP</label>
         <input class="border-2 border-black" type="text" id="cep" name="cep" v-model="cep" />
