@@ -16,7 +16,6 @@
         </div>
         <div>
           <Cep/>
-          <div class="text-alert" v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
         <div class="space-y-4 my-8">
           <p class="font-semibold">Informações de pagamento</p>
