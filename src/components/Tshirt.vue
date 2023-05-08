@@ -27,7 +27,7 @@
 <script setup>
 const files = [
   {
-    title: 'Camiseta Cervejinha',
+    title: 'Camiseta Maria Maria',
     price: 'R$ 19,90',
     description:
       'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
@@ -35,7 +35,7 @@ const files = [
     source: 'Tshirts/1.avif'
   },
   {
-    title: 'Camiseta bolso gaivota',
+    title: 'Camiseta Paciência',
     price: 'R$ 19,90',
     description:
       'Malha 88% algodão e 12% poliéster. O algodão é trazido de plantações do nordeste brasileiro, tingidos e tecidos no sul do país, e produzidos artesanalmente em Minas Gerais. Produção 100% consciente, com certificado de algodão sustentável.',
