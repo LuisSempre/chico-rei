@@ -7,12 +7,12 @@
         <div class="flex flex-col">
           <label>E-mail</label>
           <input v-model="formData.email" type="email" class="border-2 border-black" />
-          <div class="text-red-600" v-if="formErrors.email">{{ formErrors.email }}</div>
+          <div class="text-alert" v-if="formErrors.email">{{ formErrors.email }}</div>
         </div>
         <div class="flex flex-col">
           <label>Telefone</label>
           <input v-model="formData.phone" type="number" class="border-2 border-black" />
-          <div class="text-red-600" v-if="formErrors.phone">{{ formErrors.phone }}</div>
+          <div class="text-alert" v-if="formErrors.phone">{{ formErrors.phone }}</div>
         </div>
         <div>
           <Cep />
@@ -22,30 +22,30 @@
           <div class="flex flex-col">
             <label for="">Número do cartão</label>
             <input v-model="formData.numberCard" type="number" class="border-2 border-black" />
-            <div class="text-red-600" v-if="formErrors.numberCard">{{ formErrors.numberCard }}</div>
+            <div class="text-alert" v-if="formErrors.numberCard">{{ formErrors.numberCard }}</div>
           </div>
           <div class="flex flex-col">
             <label for="">Titular do cartão</label>
             <input v-model="formData.titleCard" type="text" class="border-2 border-black" />
-            <div class="text-red-600" v-if="formErrors.titleCard">{{ formErrors.titleCard }}</div>
+            <div class="text-alert" v-if="formErrors.titleCard">{{ formErrors.titleCard }}</div>
           </div>
           <div class="flex gap-4">
             <div class="flex flex-col">
               <label for="">Data de vencimento</label>
               <input v-model="formData.dateCard" type="number" class="border-2 border-black" />
-              <div class="text-red-600" v-if="formErrors.dateCard">{{ formErrors.dateCard }}</div>
+              <div class="text-alert" v-if="formErrors.dateCard">{{ formErrors.dateCard }}</div>
             </div>
             <div class="flex flex-col">
               <label for="">CVC</label>
               <input v-model="formData.cvc" type="number" class="border-2 border-black" />
-              <div class="text-red-600" v-if="formErrors.cvc">{{ formErrors.cvc }}</div>
+              <div class="text-alert" v-if="formErrors.cvc">{{ formErrors.cvc }}</div>
             </div>
           </div>
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="bg-gray-900 text-white p-2 rounded-md">Fechar&nbsp;pedido</button>
+          <button type="submit" class="bg-black text-white p-2 rounded-md font-bold">Fechar&nbsp;pedido</button>
         </div>
-        <p v-if="message" class="bg-green-500 text-white text-center p-2 rounded-md font-bold">{{ message }}</p>
+        <p v-if="message" class="bg-success text-white text-center p-2 rounded-md font-bold">{{ message }}</p>
       </form>
     </div>
     <div>
